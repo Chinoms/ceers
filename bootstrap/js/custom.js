@@ -58,8 +58,8 @@ function redirectUser(ajaxFeedback){
 				  _("signupbtn").disabled = false;
 			  } else if(runAjax.responseText = "passwordmismatch") {
 				_("signupInfo").innerHTML = "Both passwords do not match.";
-				return;
 				_("signupbtn").disabled = false;
+				return;
 			  } else {
 				  _("signupInfo").innerHTML = runAjax.responseText;
 			  }
