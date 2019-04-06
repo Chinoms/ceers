@@ -13,8 +13,8 @@ if (in_array($_SERVER['REMOTE_ADDR'], $localhost)) {
 } else {
    $host = "localhost";
    $username = "ceervdcg_dbadmin";
-   $passwd = "@dm!n!$tr@tor";
-   $dbname = "ceervdcg_ukwuoma";
+   $passwd = "@dm!n!Str@tor";
+   $dbname = "ceervdcg_dbadmin";
    $port = 8080;
    global $baseURL;
    $baseURL = "https://www.ceers.com.ng";
