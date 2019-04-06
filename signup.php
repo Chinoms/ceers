@@ -28,7 +28,7 @@
 <body class="hold-transition register-page">
 <div class="register-box">
   <div class="register-logo">
-    <a href="../../index2.html"><b>Admin</b>LTE</a>
+    <a href="../../index2.html"><b>CEERS</b></a>
   </div>
 
   <div class="register-box-body">
@@ -36,30 +36,30 @@
 
     <form onsubmit = "signupUser()">
       <div class="form-group has-feedback">
-        <input type="text" class="form-control" id="fname" placeholder="First name">
+        <input type="text" class="form-control" id="fname" placeholder="First name" required="required">
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="text" class="form-control" id="lname" placeholder="Last name">
+        <input type="text" class="form-control" id="lname" placeholder="Last name" required="required">
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="email" id="email" class="form-control" placeholder="Email">
+        <input type="email" id="email" class="form-control" placeholder="Email" required="required">
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="password" class="form-control" id="pass1" placeholder="Password">
+        <input type="password" class="form-control" id="pass1" placeholder="Password" required="required">
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="password" class="form-control" id="pass2" placeholder="Re-type password">
+        <input type="password" class="form-control" id="pass2" placeholder="Re-type password" required="required">
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
       <div class="row">
         <div class="col-xs-8">
           <div class="checkbox icheck">
             <label style="margin-left:30px">
-              <input type="checkbox"> I agree to the <a href="#">terms</a>
+              <input type="checkbox" required="required"> I agree to the <a href="#">terms.</a>
             </label>
           </div>
         </div>
@@ -71,7 +71,7 @@
       </div>
     </form>
 
-    <a href="login.html" class="text-center">I already have an account. Let me login.</a>
+    <a href="login.php" class="text-center">I already have an account. Let me login.</a>
   </div>
   <!-- /.form-box -->
 </div>

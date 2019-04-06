@@ -40,7 +40,7 @@ if (isset($_REQUEST['articleid'])) {
                             <div class="col-xs-12">
                               <div class="box">
                                 <div class="box-header">
-                                  <h3 class="box-title">Foreward</h3>
+                                  <h3 class="box-title">Abstract</h3>
 
                                   <div class="box-tools">
 

@@ -47,7 +47,7 @@
                             <div class="col-xs-12">
                               <div class="box">
                                 <div class="box-header">
-                                  <h2>Foreward</h2>
+                                  <h2>Abstract</h2>
                     
                                   <div class="box-tools">
                                    

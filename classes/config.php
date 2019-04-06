@@ -1,12 +1,26 @@
 <?php
 
-$host = "localhost";
-$username = "root";
-$passwd = "";
-$dbname = "ukwuoma";
-$port = 8080;
-global $baseURL;
-$baseURL = "http://localhost/ukwuoma";
+
+$localhost = array("127.0.0.1", "::1");
+if (in_array($_SERVER['REMOTE_ADDR'], $localhost)) {
+   $host = "localhost";
+   $username = "root";
+   $passwd = "";
+   $dbname = "ukwuoma";
+   $port = 8080;
+   global $baseURL;
+   $baseURL = "http://localhost/ceers";
+} else {
+   $host = "localhost";
+   $username = "ceervdcg_dbadmin";
+   $passwd = "@dm!n!$tr@tor";
+   $dbname = "ceervdcg_ukwuoma";
+   $port = 8080;
+   global $baseURL;
+   $baseURL = "https://www.ceers.com.ng";
+}
+
+
 
 
 
@@ -14,7 +28,7 @@ $conn = new mysqli($host, $username, $passwd);
 $conn->select_db($dbname);
 // Check connection
 if ($conn->connect_error) {
-    die("<b>Connection failed: " . $conn->connect_error . "</b>");
+    die("<h3>Connection failed: " . $conn->connect_error . "</h3>");
 }
 
 ?>
