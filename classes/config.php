@@ -13,7 +13,7 @@ if (in_array($_SERVER['REMOTE_ADDR'], $localhost)) {
 } else {
    $host = "localhost";
    $username = "ceervdcg_dbadmin";
-   $passwd = "@dm!n!Str@tor";
+   $passwd = "ificouldtellyou..";
    $dbname = "ceervdcg_dbadmin";
    $port = 8080;
    global $baseURL;
