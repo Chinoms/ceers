@@ -24,11 +24,11 @@ if (in_array($_SERVER['REMOTE_ADDR'], $localhost)) {
 
 
 
-$conn = new mysqli($host, $username, $passwd);
-$conn->select_db($dbname);
+$conn = new mysqli($host, $username, $passwd, $dbname);
+//$conn->select_db($dbname);
 // Check connection
 if ($conn->connect_error) {
     die("<h3>Connection failed: " . $conn->connect_error . "</h3>");
-}
+} 
 
 ?>

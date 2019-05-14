@@ -26,6 +26,8 @@ class Auth Extends MailerClass{
                 if($createAccount->execute()) {
                    // $this->welcomeScholar($fname, $email);
                     echo "success";
+                } else {
+                    echo $conn->error;
                 }
             }
             
