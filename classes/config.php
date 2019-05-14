@@ -1,6 +1,5 @@
 <?php
 
-
 $localhost = array("127.0.0.1", "::1");
 if (in_array($_SERVER['REMOTE_ADDR'], $localhost)) {
    $host = "localhost";
@@ -29,6 +28,8 @@ $conn = new mysqli($host, $username, $passwd, $dbname);
 // Check connection
 if ($conn->connect_error) {
     die("<h3>Connection failed: " . $conn->connect_error . "</h3>");
-} 
+} else {
+    echo "¿Qué estás buscando aquí?🤣";
+}
 
 ?>
