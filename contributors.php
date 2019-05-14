@@ -26,10 +26,12 @@ require_once("publicinc/header.php");
                 <p class="text-justify bodytext">The journal articles should be presented following the APA format
                     of presenting documents and articles. The length of an article in a journal MUST not be less than
                     six (6) pages and not more 17 pages including appendices. The articles must be submitted in an
-                    A4 paper size, Times New Roman font style and font size 12, double spaced. Submission must be soft copy.
+                    A4 paper size, Times New Roman font style and font size 12, double spaced. Submission must be soft
+                    copy.
                 </p>
 
-                <p class="text-justify bodytext">A serial article, monograph or technical report should be not less than 20
+                <p class="text-justify bodytext">A serial article, monograph or technical report should be not less than
+                    20
                     pages and not more than 50 pages. Following the formats as in the journal article.
                 </p>
 
@@ -51,7 +53,8 @@ require_once("publicinc/header.php");
                     </strong>
                 </p>
                 <p>
-                    <p class="text-justify bodytext"> To become a contributor, click on the button below to signup and start publishing.
+                    <p class="text-justify bodytext"> To become a contributor, click on the button below to signup and
+                        start publishing.
                         <br>
                         <br>
                         <a href="signup.php" target="_blank"><button class="btn bg-info text-white">Signup</button></a>
