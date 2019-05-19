@@ -98,16 +98,16 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#!">TEAM</a>
+                        <a class="nav-link" href="team.php">TEAM</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#!">CONTRIBUTORS</a>
+                        <a class="nav-link" href="contributors.php">CONTRIBUTORS</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#!">NEWS</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#!">CONTACT</a>
+                        <a class="nav-link" href="contact.php">CONTACT</a>
                     </li>
                 </ul>
                 <ul class="nav navbar-nav ml-auto w-100 justify-content-end">

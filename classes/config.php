@@ -29,7 +29,8 @@ $conn = new mysqli($host, $username, $passwd, $dbname);
 if ($conn->connect_error) {
     die("<h3>Connection failed: " . $conn->connect_error . "</h3>");
 } else {
-    echo "¿Qué estás buscando aquí?🤣";
+    //echo "¿Qué estás buscando aquí?🤣";
+    echo $conn->error;
 }
 
 ?>

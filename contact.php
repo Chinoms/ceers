@@ -1,6 +1,6 @@
 <?php
-    require_once("publicinc/header.php");
-  ?>
+require_once("publicinc/header.php");
+?>
 <section class="fdb-block py-0" style="background-color:#118187">
     <div class="container bg-r py-5" id="innerhero">
         <div class="row">
@@ -29,15 +29,11 @@
                     using any of the details provided below.
                 </p>
 
-                <p class="lead">
-
-                </p>
-
-
                 <p class="h3 mt-5">
+                    <strong>Address: </strong>Faculty of Education, Imso State University
                     <strong>Email:</strong> <a href="mailto:enquiries@ceers.com.ng">enquiries@ceers.com.ng</a>
                     <br>
-                    <strong>Phone: </strong>0122334455</a>
+                    <strong>Phone: </strong>0122334455
                 </p>
             </div>
 
@@ -65,8 +61,7 @@
                     </div>
                     <div class="row mt-4">
                         <div class="col">
-                            <textarea class="form-control" name="message" rows="3"
-                                placeholder="How can we help?"></textarea>
+                            <textarea class="form-control" name="message" rows="3" placeholder="How can we help?"></textarea>
                         </div>
                     </div>
                     <div class="row mt-4">
@@ -81,5 +76,5 @@
 </section>
 
 <?php
-    require_once("publicinc/footer.php");
-    ?>
+require_once("publicinc/footer.php");
+?>
