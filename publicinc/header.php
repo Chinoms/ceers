@@ -74,7 +74,7 @@
 
         <nav class="navbar navbar-light navbar-expand-md bg-faded justify-content-center">
             <a href="index.php">
-                <h1 class="text-info">TCEERS</h1>
+                <img src="imgs/tceerslogo.png" width="140">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar3">
                 <span class="navbar-toggler-icon"></span>
