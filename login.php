@@ -19,7 +19,7 @@
     <body class="hold-transition login-page">
         <div class="login-box">
             <div class="login-logo">
-                <a href="#"><h2>CEERS</h2></a>
+            <a href="#!"><b><img src="imgs/tceerslogo.png"></b></a>
             </div>
             <!-- /.login-logo -->
             <div class="login-box-body">

@@ -34,7 +34,7 @@ require_once("publicinc/header.php");
             <div class="col-sm-6">
                 <div class="row align-items-center">
                     <div class="col-4">
-                        <img alt="image" class="img-fluid rounded" src="http://pstu.ac.bd/images/defaults/default.png">
+                        <img alt="image" class="img-fluid rounded" src="imgs/profpmc.jpeg">
                     </div>
 
                     <div class="col-8">
@@ -82,14 +82,14 @@ require_once("publicinc/header.php");
             <div class="col-sm-6">
                 <div class="row align-items-center">
                     <div class="col-4">
-                        <img alt="image" class="img-fluid rounded" src="http://pstu.ac.bd/images/defaults/default.png">
+                        <img alt="image" class="img-fluid rounded" src="imgs/jason.jpeg">
                     </div>
 
                     <div class="col-8">
                         <h3><strong>Ukwuoma Jason C.</strong></h3>
                         <p class="lead">Secretary/Website Manager</p>
 
-                        <p>A specialist if document production and desktop publishing.
+                        <p>A specialist of document production and desktop publishing.
                             He is also a specialist in research data analysis using statistical
                             packages (SPSS, ISRES, PSPP, STATA, IRTPRO, LISREL, X-CALIBRE, ITMAN, etc)and
                             manually even with complex formula. He is a research assistant and is involved

@@ -9,8 +9,8 @@ require_once("publicinc/header.php");
             </div>
             <div class="col-12 col-sm-10 col-md-8 text-center text-sm-left">
                 <!--h1>Froala Design Blocks</h1-->
-                <p class="lead whitetext">TCEERS.COM is a site for a consultum to review, produce and publish a quality
-                    journal article,
+                <p class="lead whitetext">TCEERS.COM is a site for a consultum to review, produce and publish quality
+                    journals, articles,
                     monographs, and technical reports mainly in the areas of Educational Evaluation, Research,
                     Statistics and Mathematics</p>
                 <p class="mt-4">
@@ -31,7 +31,7 @@ require_once("publicinc/header.php");
     <div class="container">
         <div class="row text-center">
             <div class="col-12">
-                <h2>What we do</h2>
+                <h2>What We Do</h2>
             </div>
         </div>
         <div class="row text-center justify-content-center mt-5">
