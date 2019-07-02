@@ -49,7 +49,7 @@ require_once("publicinc/header.php");
 
             <div class="col-12 col-sm-6 col-lg-3 pt-4 pt-lg-0">
                 <span class="fa fa-users fa-4x iconcolor"></span>
-                <h3><strong>Conferences and Workshops</strong></h3>
+                <h3><strong>Conferences And Workshops</strong></h3>
                 <p>in the areas of Educational Evaluation, Research and Statistics</p>
             </div>
 
