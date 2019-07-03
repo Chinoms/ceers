@@ -51,7 +51,7 @@ $userInfo = $checkUsers->userData($conn);
             <header class="main-header">
                 <!-- Logo -->
                 <a href="#" class="logo">
-                    <!-- mini logo for sidebar mini 50x50 pixels -->
+                    <!-- mini logo for sidebar mini 50x50 pixels >
                     <span class="logo-mini"><img src="../imgs/tceerslogo.png" width="30"></span>
                     <!-- logo for regular state and mobile devices -->
                     <span class="logo-lg"><img src="../imgs/tceerslogo.png" width="150"></span>
@@ -73,7 +73,7 @@ $userInfo = $checkUsers->userData($conn);
                             <li class="dropdown user user-menu">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                     <!--?php// $imgLink = str_replace("..", "", $profileData['passport']) ?--->
-                                    <img src="<?php //echo $baseURL."/".$imgLink; ?>" class="user-image" alt="User Image">
+                                    <!--img src="<?php //echo $baseURL."/".$imgLink; ?>" class="user-image" alt="User Image"-->
                                     <span class="hidden-xs"><?php echo $userInfo['fname'] ." ".$userInfo['lname']; ?></span>
                                 </a>
                                 <ul class="dropdown-menu">
