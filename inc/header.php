@@ -52,7 +52,7 @@ $userInfo = $checkUsers->userData($conn);
                 <!-- Logo -->
                 <a href="#" class="logo">
                     <!-- mini logo for sidebar mini 50x50 pixels -->
-                    <span class="logo-mini"><img src="uploads/minilogo.png" width="30"></span>
+                    <span class="logo-mini"><img src="../imgs/tceerslogo.png" width="30"></span>
                     <!-- logo for regular state and mobile devices -->
                     <span class="logo-lg"><img src="uploads/logo.png" width="150"></span>
                 </a>
