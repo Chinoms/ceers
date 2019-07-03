@@ -79,7 +79,7 @@ $userInfo = $checkUsers->userData($conn);
                                 <ul class="dropdown-menu">
                                     <!-- User image -->
                                     <li class="user-header">
-                                        <img src="" class="img-circle" alt="User Image">
+                                        <!--img src="" class="img-circle" alt="User Image"-->
 
                                         <p>
                                             <?php
