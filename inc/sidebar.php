@@ -58,7 +58,7 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="addarticle.php"><i class="fa fa-circle-o"></i> Submit Serial</a></li>
+            <li><a href="addArticle.php"><i class="fa fa-circle-o"></i> Submit Serial</a></li>
             <li><a href="pendingArticles.php"><i class="fa fa-circle-o"></i> View Pending Serials</a></li>
             <li><a href="approvedArticles.php"><i class="fa fa-circle-o"></i> View Accepted Serials</a></li>
           </ul>
