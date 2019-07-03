@@ -5,7 +5,7 @@ require_once("publicinc/header.php");
     <div class="container bg-r py-5" id="innerhero">
         <div class="row">
             <div class="col-md-4" style="border-right: 5px solid white">
-                <h3 class="headerintro">THE CONSULTUM FOR ECUATIONAL EVALUATORS, RESEARCHERS AND STATISTICIANS</h3>
+                <h3 class="headerintro">THE CONSULTUM FOR EDUCATIONAL EVALUATORS, RESEARCHERS AND STATISTICIANS</h3>
             </div>
             <div class="col-12 col-sm-10 col-md-8 text-center text-sm-left">
                 <h1 class="whitetext">Become a Contributor</h1>
