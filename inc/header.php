@@ -35,7 +35,7 @@ $userInfo = $checkUsers->userData($conn);
         <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
         <!-- bootstrap wysihtml5 - text editor -->
         <link rel="stylesheet" href="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
-        <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
+        <script src="https://cdn.tiny.cloud/1/aegktxu2c9vh3lcer166axjn1t8y0ayi0h547w408hra2khz/tinymce/5/tinymce.min.js"></script>
   <script>tinymce.init({ selector:'#description' });</script>
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
