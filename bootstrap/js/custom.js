@@ -53,7 +53,7 @@ function redirectUser(ajaxFeedback){
           if(runAjax.readyState == 4 && runAjax.status == 200) {
               if(runAjax.responseText == "success") {
 				  _("signupInfo").innerHTML = "Congrats! You've been signed up.";
-				  location.href="emailuser.php";
+				 // location.href="emailuser.php";
               } else if(runAjax.responseText == "emailexists"){
 				  _("signupInfo").innerHTML = "The email address you're trying to use is on our system.";
 				  _("signupbtn").disabled = false;
