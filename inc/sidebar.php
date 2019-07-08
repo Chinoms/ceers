@@ -90,6 +90,21 @@
           <ul class="treeview-menu">
             <li><a href="#"><i class="fa fa-circle-o"></i> Edit Profile</a></li>
             <li><a href="#"><i class="fa fa-circle-o"></i> Change Password</a></li>
+            <?php  $checkUsers->showURLpriv($conn, "google.com"); ?>
+          </ul>
+        </li>
+
+        
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-files-o"></i>
+            <span>Administration</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <?php  $checkUsers->showURLpriv($conn, '<li><a href="#"><i class="fa fa-circle-o"></i> View Pending Journals</a></li>'); ?>
           </ul>
         </li>
          

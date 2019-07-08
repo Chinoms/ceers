@@ -41,6 +41,7 @@ require_once "classes/journals.php";
                 <tr>
                   <th>SN</th>
                   <th>Title</th>
+                  <th>Author</th>
                   <th>Date/Time</th>
                   <th>Status</th>
                   <!--th>Excerpt</th-->
@@ -48,7 +49,7 @@ require_once "classes/journals.php";
                 </tr>
                 <?php
 $userId = $userInfo['id'];
-$journalMethods->fetchPendingJournals($conn, $userId);
+$journalMethods->fetchPendingJournals($conn, $userId, $checkUsers);
 ?>
 
               </table>

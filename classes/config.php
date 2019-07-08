@@ -16,7 +16,7 @@ if (in_array($_SERVER['REMOTE_ADDR'], $localhost)) {
    $dbname = "ceervdcg_ukwuoma";
    $port = 8080;
    global $baseURL;
-   $baseURL = "https://www.ceers.com.ng";
+   $baseURL = "http://tceers.com/";
 }
 
 

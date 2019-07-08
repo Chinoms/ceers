@@ -79,6 +79,17 @@ class Auth Extends MailerClass{
         session_destroy();
         header("location:logout.php");
     }
+
+    public function showURLpriv($conn, $text){
+        /*  
+        *@param $text string = url to show in the menu
+
+
+        */
+        if($this->userData($conn)['priv'] == "superadmin"){
+            echo $text;
+        }
+    }
 }
 
 $checkUsers = new Auth();
