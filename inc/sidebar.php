@@ -94,7 +94,9 @@
           </ul>
         </li>
 
-        
+        <?php 
+        if($checkUsers->userData($conn)['priv'] === "superadmin") {
+          echo '
         <li class="treeview">
           <a href="#">
             <i class="fa fa-files-o"></i>
@@ -104,10 +106,11 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <?php  $checkUsers->showURLpriv($conn, '<li><a href="#"><i class="fa fa-circle-o"></i> View Pending Journals</a></li>'); ?>
+            <li><a href="#"><i class="fa fa-circle-o"></i> View Pending Journals</a></li>
           </ul>
-        </li>
-         
+        </li>';
+        }
+         ?>
     </section>
     <!-- /.sidebar -->
   </aside>
