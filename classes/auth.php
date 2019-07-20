@@ -90,6 +90,15 @@ class Auth Extends MailerClass{
             echo $text;
         }
     }
+
+    public function checkPriv($conn, $priv){
+        /*
+        *Fetch user's privilege.
+        */
+       $priv = $this->userData($conn)['priv'];
+            return $priv;
+        
+    }
 }
 
 $checkUsers = new Auth();

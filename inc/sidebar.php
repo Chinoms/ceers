@@ -106,7 +106,7 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="#"><i class="fa fa-circle-o"></i> View Pending Journals</a></li>
+            <li><a href="pendingJournals.php"><i class="fa fa-circle-o"></i> View Pending Journals</a></li>
           </ul>
         </li>';
         }

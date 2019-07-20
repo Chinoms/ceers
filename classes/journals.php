@@ -1,10 +1,10 @@
 <?php
 require_once("fileUpload.php");
-require_once("classes/auth.php");
+require_once("auth.php");
 /**
  *This class handles all functionality relating to the journals
  **/
-class journals extends fileUpload
+class journals Extends fileUpload
 {
     public function addJournal($conn, $itemName, $itemAuthor, $itemAuthorId, $parentJournal, $keywords, $description, $journalid)
     {
@@ -88,8 +88,9 @@ class journals extends fileUpload
             <td>" . $pendingJournals['item_author'] . "</td>
             <td>" . $pendingJournals['item_date'] . "</td>
             <td><span class='label label-warning'>Pending</span></td>
-            <td style='width:auto'><a href = 'viewJournal.php?journalid=" . $pendingJournals['id'] . "'><button class='btn btn-primary'>View <i class='fa fa-eye'></i></button></a> &nbsp; <a href='#'><button class='btn btn-danger'>Delete <i class='fa fa-trash'></i></button></a></td>
-          </tr>";
+            <td style='width:auto'><a href = 'viewJournal.php?journalid=" . $pendingJournals['id'] . "'><button class='btn btn-primary'>View <i class='fa fa-eye'></i>
+            <!--/button></a> &nbsp; <a href='#'><button class='btn btn-danger'>Delete <i class='fa fa-trash'></i></button></a></td-->
+            </tr>";
         }
 
         //return $pendingJournals;
@@ -98,6 +99,25 @@ class journals extends fileUpload
     function deleteJournalItem($conn, $journalid)
     {
         $checkJournalStatus = $conn->query("SELECT * FROM journal_items WHERE id = '$journalid'");
+    }
+/** 
+
+    function editJournal($conn, $journal_id)
+    {
+        $this->f
+    }
+    **/
+
+
+    public function updateJournal($conn, $itemName, $keywords, $description, $approved, $journalid, $approvedDate)
+    {
+        $saveJournal = $conn->prepare("UPDATE journal_items SET item_name = ?, keywords = ?, item_desc = ?, approval_status = ?, approval_date = ? WHERE id = ?");
+        $saveJournal->bind_param("sssiss", $itemName, $keywords, $description, $approved, $approvedDate, $journalid);
+        if ($saveJournal->execute()) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
 

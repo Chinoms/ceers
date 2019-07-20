@@ -103,9 +103,59 @@ class fileUpload {
         //return $fileDestination;
     }
 
+
+    function journalUpdate($conn, $articleName, $description, $id) {
+        global $output;
+        global $fileDestination;
+        global $validFile;
+        
+        if (!$_FILES['journalfile']['error']) {
+            $prefix = mt_rand(0, 9999) . date('is');
+            $newfilename = $prefix . strtolower($_FILES['journalfile']['name']); //rename file
+            $newfilename = str_replace(" ", "_", $newfilename);
+            if ($_FILES['journalfile']['size'] > (71457280)) { //can't be larger than 1 MB
+                $validFile = false;
+                echo "filetoolarge";
+                return false;
+            }
+            $mime_filter = array(
+                'application/pdf'
+                );
+            if (!in_array($_FILES['journalfile']['type'], $mime_filter)) {
+                $validFile = false;
+                echo "invalidfiletype";
+                return false;
+            } else {
+                $validFile = true;
+            }
+            if($validFile !==false) {
+               $fileDestination = "../res/journals/";
+               move_uploaded_file($_FILES['journalfile']['tmp_name'], $fileDestination . $newfilename);
+               //echo "success";
+               $finalDestination = $fileDestination.$newfilename;
+               $saveArticle = $conn->prepare("UPDATE journal_items SET file_url = ? WHERE id = ?");
+               $saveArticle->bind_param("si", $finalDestination, $id);
+               if($saveArticle->execute()) {
+                   //echo $conn->insert_id;
+               }
+               $output =  $fileDestination.$newfilename; 
+
+               //echo "success"; 
+               return "success";
+               
+            } else {
+                //echo "failed";
+                return false;
+            }
+        } else {
+            //echo "error";
+            return false;
+        }
+        //return $fileDestination;
+    }
+
     
 
 }
 
 $file = new FileUpload;
-?>

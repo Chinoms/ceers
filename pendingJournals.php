@@ -2,7 +2,6 @@
 require_once "inc/header.php";
 require_once "inc/sidebar.php";
 require_once "classes/journals.php";
-
 ?>
 
 <div class="content-wrapper">

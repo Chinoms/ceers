@@ -31,38 +31,58 @@ if (isset($_REQUEST['journalid'])) {
                         <!-- Content Header (Page header) -->
                         <section class="content-header">
                                 
-                        <a href="editJournal.php?journalid='.$item_id.'"><button style="position:fixed; z-index:3; margin-left:70%;" class="btn btn-primary btn-lg pull-right"><span class="fa fa-edit"></span>&nbsp; EDIT</button></a>
-                            <h1>
-                                ' . $journalData['item_name'] . '
-                                <small></small>
-                            </h1>
-                            
-                        </section>
-                    
-                        <!-- Main content -->
-                        <section class="content">
-                    
-                    
-                                 
-                    
-                    <div class="row">
-                            <div class="col-xs-12">
-                              <div class="box">
-                                <div class="box-header">
-                                  <h2>Foreward</h2>
-                    
-                                  <div class="box-tools">
-                                   
-                                  </div>
-                                </div>
-                                <!-- /.box-header -->
-                                <div class="box-body table-responsive" ">
-                            ' . $journalData['item_desc'] . '
-                            <br>
-                            <h2>The Document:</h2>
-                                <embed class="col-md-12" height="500" type="application/pdf" src="' . $baseURL . str_replace("..", "", $journalData["file_url"]) . '">
-</object>
-                    ';
+                        
+                        <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">Edit journal</h3>
+            </div>
+            <!-- /.box-header -->
+            <!-- form start -->
+            <form role="form" action="modules/updateJournal.php" method="POST" enctype="multipart/form-data">
+              <div class="box-body">
+                
+                <br>
+                <br>
+                <div class="form-group">
+                  <label">Journal title</label>
+                  <input type="text" class="form-control" value="' . $journalData['item_name'] . '" name="itemname" required="required">
+                </div>
+
+                <div class="form-group">
+                <label for="exampleInputEmail1">Keywords</label>
+                <input type="text" class="form-control" value="' . $journalData['keywords'] . '" name="keywords" required="required">
+              </div>
+
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Foreward</label>
+                  <textarea class="form-control" id="description" name="itemdescription">' . $journalData['item_desc'] . '</textarea>
+                </div>
+                <div class="form-group">
+                <strong>Delete old file?</strong> This would prevent us from having useless files on the server.<br>
+                <input type="radio" name="delete" value="youcandelete" required="required"> Yes
+                </div>
+                <div class="form-group">
+                <input type="radio" name="delete" name="donotdelete"> No
+                </div>
+                <br>
+                  <label for="exampleInputFile">Update file</label>
+                  <input type="file" name="journalfile" class="form-control">
+                </div>
+               <!----Server-side stuff goes here----->
+               <input type="hidden" value="' . $journalData['id'] . '" name="journalid">
+               <input type="hidden" value="' . $journalData['file_url'] . '" name="journalfile">
+
+               <div class="form-control">
+                <input type="submit" class="btn btn-primary pull-right" value="Update Journal" name="editJournal">
+              </div>
+              </div>
+
+              <!-- /.box-body -->
+
+              
+            </form>
+          </div>
+                        ';
     //  echo ;
   } elseif ($payInfo['payer_id'] === $userInfo['id']) {
     // die($payInfo['payer_id']. $userInfo['id']);
@@ -92,10 +112,15 @@ if (isset($_REQUEST['journalid'])) {
                                    
                                   </div>
                                 </div>
+
+                                
                                 <!-- /.box-header -->
                                 <div class="box-body table-responsive" ">
                             ' . $journalData['item_desc'] . '
                             <br>
+                            <div class="col-lg-5">
+                                    <h1>jhjhjk</h1>
+                                </div>
                             <h2>The Document:</h2>
                                 <embed class="col-md-12" height="500" type="application/pdf" src="' . $baseURL . str_replace("..", "", $journalData["file_url"]) . '">
 </object>';
