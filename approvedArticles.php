@@ -9,7 +9,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            Pending articles
+            Approved Articles
             <small></small>
         </h1>
         <!--ol class="breadcrumb">
@@ -29,7 +29,7 @@
         <div class="col-xs-12">
           <div class="box">
             <div class="box-header">
-              <h3 class="box-title">Yet to be accepted by the admin</h3>
+              <h3 class="box-title">Articles approved by the admin</h3>
 
               <div class="box-tools">
                
@@ -43,7 +43,7 @@
                   <th>Title</th>
                   <th>Date/Time</th>
                   <th>Status</th>
-                  <th>Excerpt</th>
+                  <!--th>Excerpt</th-->
                   <th>Action</th>
                 </tr>
                 <?php

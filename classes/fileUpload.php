@@ -154,6 +154,57 @@ class fileUpload {
         //return $fileDestination;
     }
 
+    function articleUpdate($conn, $articleName, $description, $id) {
+        global $output;
+        global $fileDestination;
+        global $validFile;
+        
+        if (!$_FILES['articlefile']['error']) {
+            $prefix = mt_rand(0, 9999) . date('is');
+            $newfilename = $prefix . strtolower($_FILES['articlefile']['name']); //rename file
+            $newfilename = str_replace(" ", "_", $newfilename);
+            if ($_FILES['articlefile']['size'] > (71457280)) { //can't be larger than 1 MB
+                $validFile = false;
+                echo "filetoolarge";
+                return false;
+            }
+            $mime_filter = array(
+                'application/pdf'
+                );
+            if (!in_array($_FILES['articlefile']['type'], $mime_filter)) {
+                $validFile = false;
+                echo "invalidfiletype";
+                return false;
+            } else {
+                $validFile = true;
+            }
+            if($validFile !==false) {
+               $fileDestination = "../res/ceers/";
+               move_uploaded_file($_FILES['articlefile']['tmp_name'], $fileDestination . $newfilename);
+               //echo "success";
+               $finalDestination = $fileDestination.$newfilename;
+               $saveArticle = $conn->prepare("UPDATE seers SET file_url = ? WHERE id = ?");
+               $saveArticle->bind_param("si", $finalDestination, $id);
+               if($saveArticle->execute()) {
+                   //echo $conn->insert_id;
+               }
+               $output =  $fileDestination.$newfilename; 
+
+              // echo "success"; 
+               return "success";
+               
+            } else {
+                //echo "failed";
+                return false;
+            }
+        } else {
+            //echo "error";
+            return false;
+        }
+        //return $fileDestination;
+    }
+
+
     
 
 }

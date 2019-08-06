@@ -22,10 +22,11 @@ if (isset($_REQUEST['articleid'])) {
     $checkPay = $conn->query("SELECT * FROM paiditems WHERE payer_id = '$userid' AND item_id = '$item_id'");
     $payInfo = $checkPay->fetch_assoc();
 
-    if ($articleData['author_id'] === $userInfo['id']) {
+    if ($articleData['author_id'] === $userInfo['id']  || $checkUsers->userData($conn)['priv'] == "superadmin") {
         echo '<div class="content-wrapper">
                         <!-- Content Header (Page header) -->
                         <section class="content-header">
+                        <a href="editArticle.php?articleid='.$item_id.'"><button style="position:fixed; z-index:3; margin-left:70%;" class="btn btn-primary btn-lg pull-right"><span class="fa fa-edit"></span>&nbsp; EDIT</button></a>
                             <h1>
                                 ' . $articleData['title'] . '
                                 <small></small>

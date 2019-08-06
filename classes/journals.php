@@ -4,7 +4,7 @@ require_once("auth.php");
 /**
  *This class handles all functionality relating to the journals
  **/
-class journals Extends fileUpload
+class journals extends fileUpload
 {
     public function addJournal($conn, $itemName, $itemAuthor, $itemAuthorId, $parentJournal, $keywords, $description, $journalid)
     {
@@ -43,11 +43,14 @@ class journals Extends fileUpload
     }
 
 
-    public function fetchApprovedJournals($conn, $userId)
+    public function fetchApprovedJournals($conn, $userId, $checkUsers)
     {
         global $pendingJournals;
-        $returnJournals = $conn->query("SELECT * FROM journal_items WHERE item_author_id = '$userId' AND approval_status = 1");
-
+        if ($checkUsers->userData($conn)['priv'] == "superadmin") {
+            $returnJournals = $conn->query("SELECT * FROM journal_items WHERE approval_status = 1");
+        } else {
+            $returnJournals = $conn->query("SELECT * FROM journal_items WHERE item_author_id = '$userId' AND approval_status = 1");
+        }
         $serialNumber = 0;
         $approvedJournals = $returnJournals->fetch_assoc();
         if (empty($approvedJournals)) {
@@ -100,13 +103,13 @@ class journals Extends fileUpload
     {
         $checkJournalStatus = $conn->query("SELECT * FROM journal_items WHERE id = '$journalid'");
     }
-/** 
+    /** 
 
     function editJournal($conn, $journal_id)
     {
         $this->f
     }
-    **/
+     **/
 
 
     public function updateJournal($conn, $itemName, $keywords, $description, $approved, $journalid, $approvedDate)

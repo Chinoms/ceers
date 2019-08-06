@@ -1,11 +1,16 @@
 <?php
+//unlink("res/journals/77284414chinomnso_ugwuanya_-_cv_-_copy_2.pdf");
 
-$firstName = "Nkechi";
-$age = 24;
-$address = "25, Ikoku Street";
-$weight = "62.5kg";
+$articleName = $_REQUEST['itemname'];
+$description = $_REQUEST['itemdescription'];
+$id = $_REQUEST['journalid'];
+$deletepermission = $_REQUEST['delete'];
+$oldFile = $_REQUEST['journalfile'];
 
-echo "Her name is ". $firstName;
-echo "<br> She is ".$age." years old. She lives at ".$address.". She weighs ".$weight.".";
+/**variable names for methodupdateJournal() */
+$itemName = $articleName;
+$keywords = $_REQUEST['keywords'];
+$journalid = $id;
 
+updateJournal($conn, $itemName, $keywords, $description, $journalid)
 ?>

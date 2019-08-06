@@ -48,7 +48,7 @@
                 </tr>
                 <?php
                 $userId = $userInfo['id'];
-                $journalMethods->fetchApprovedJournals($conn, $userId);
+                $journalMethods->fetchApprovedJournals($conn, $userId, $checkUsers);
                 ?>
                
               </table>

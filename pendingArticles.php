@@ -43,12 +43,11 @@
                   <th>Title</th>
                   <th>Date/Time</th>
                   <th>Status</th>
-                  <th>Excerpt</th>
                   <th>Action</th>
                 </tr>
                 <?php
                 $userId = $userInfo['id'];
-                $seersClass->fetchPendingArticles($conn, $userId);
+                $seersClass->fetchPendingArticles($conn, $userId, $checkUsers);
                 ?>
                
               </table>

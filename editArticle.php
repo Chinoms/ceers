@@ -1,7 +1,7 @@
 <?php
 require_once("inc/header.php");
 require_once("inc/sidebar.php");
-require_once("classes/journals.php");
+require_once("classes/seers.php");
 
 ?>
 
@@ -9,24 +9,24 @@ require_once("classes/journals.php");
 
 <?php
 //$baseURL = "http://localhost/ukwuoma";
-if (isset($_REQUEST['journalid'])) {
-  $journalID = $_REQUEST['journalid'];
+if (isset($_REQUEST['articleid'])) {
+  $journalID = $_REQUEST['articleid'];
   //check to see if this person owns what he's trying to view
-  $getJournal = $conn->query("SELECT * FROM journal_items WHERE id = '$journalID'");
-  $journalData = $getJournal->fetch_assoc();
+  $getArticle = $conn->query("SELECT * FROM seers WHERE id = '$journalID'");
+  $articleData = $getArticle->fetch_assoc();
   //prepare some variables
-  $item_id = $journalData['id'];
-  $author_id = $journalData['item_author_id'];
+  $item_id = $articleData['id'];
+  $author_id = $articleData['author_id'];
   $userid = $userInfo['id'];
 
-  //var_dump($journalData);
+  //var_dump($articleData);
   //Check payment status
   $checkPay = $conn->query("SELECT * FROM paiditems WHERE payer_id = '$userid' AND item_id = '$item_id'");
   $payInfo = $checkPay->fetch_assoc();
 
   //var_dump($payInfo);
-  if ($journalData['item_author_id'] === $userInfo['id'] || $checkUsers->userData($conn)['priv'] == "superadmin") {
-    //die($journalData['item_author_id'] ."<br>".$userInfo['id']);
+  if ($articleData['author_id'] === $userInfo['id'] || $checkUsers->userData($conn)['priv'] == "superadmin") {
+    //die($articleData['item_author_id'] ."<br>".$userInfo['id']);
     echo '<div class="content-wrapper">
                         <!-- Content Header (Page header) -->
                         <section class="content-header">
@@ -38,24 +38,24 @@ if (isset($_REQUEST['journalid'])) {
             </div>
             <!-- /.box-header -->
             <!-- form start -->
-            <form role="form" action="modules/updateJournal.php" method="POST" enctype="multipart/form-data">
+            <form role="form" action="modules/updateArticle.php" method="POST" enctype="multipart/form-data">
               <div class="box-body">
                 
                 <br>
                 <br>
                 <div class="form-group">
                   <label">Journal title</label>
-                  <input type="text" class="form-control" value="' . $journalData['item_name'] . '" name="itemname" required="required">
+                  <input type="text" class="form-control" value="' . $articleData['title'] . '" name="itemname" required="required">
                 </div>
 
                 <div class="form-group">
                 <label for="exampleInputEmail1">Keywords</label>
-                <input type="text" class="form-control" value="' . $journalData['keywords'] . '" name="keywords" required="required">
+                <input type="text" class="form-control" value="' . $articleData['keywords'] . '" name="keywords" required="required">
               </div>
 
                 <div class="form-group">
-                  <label for="itemdescription">Foreward</label>
-                  <textarea class="form-control" id="description" name="itemdescription">' . $journalData['item_desc'] . '</textarea>
+                  <label for="exampleInputPassword1">Foreward</label>
+                  <textarea class="form-control" id="description" name="itemdescription">' . $articleData['descr'] . '</textarea>
                 </div>
                 <div class="form-group">
                 <strong>Delete old file?</strong> This would prevent us from having useless files on the server.<br>
@@ -66,11 +66,11 @@ if (isset($_REQUEST['journalid'])) {
                 </div>
                 <br>
                   <label for="exampleInputFile">Update file</label>
-                  <input type="file" name="journalfile" class="form-control" required="required">
+                  <input type="file" name="articlefile" class="form-control" required="required">
                 </div>
                <!----Server-side stuff goes here----->
-               <input type="hidden" value="' . $journalData['id'] . '" name="journalid">
-               <input type="hidden" value="' . $journalData['file_url'] . '" name="journalfile">
+               <input type="hidden" value="' . $articleData['id'] . '" name="articleid">
+               <input type="hidden" value="' . $articleData['file_url'] . '" name="articlefile">
 
                <div class="form-control">
                 <input type="submit" class="btn btn-primary pull-right" value="Update Journal" name="editJournal">
@@ -90,7 +90,7 @@ if (isset($_REQUEST['journalid'])) {
                         <!-- Content Header (Page header) -->
                         <section class="content-header">
                             <h1>
-                                ' . $journalData['item_name'] . '
+                                ' . $articleData['item_name'] . '
                                 <small></small>
                             </h1>
                             
@@ -116,13 +116,10 @@ if (isset($_REQUEST['journalid'])) {
                                 
                                 <!-- /.box-header -->
                                 <div class="box-body table-responsive" ">
-                            ' . $journalData['item_desc'] . '
+                            ' . $articleData['item_desc'] . '
                             <br>
-                            <div class="col-lg-5">
-                                    <h1>jhjhjk</h1>
-                                </div>
                             <h2>The Document:</h2>
-                                <embed class="col-md-12" height="500" type="application/pdf" src="' . $baseURL . str_replace("..", "", $journalData["file_url"]) . '">
+                                <embed class="col-md-12" height="500" type="application/pdf" src="' . $baseURL . str_replace("..", "", $articleData["file_url"]) . '">
 </object>';
   } else {
     ?>
@@ -134,7 +131,7 @@ if (isset($_REQUEST['journalid'])) {
     // echo $userInfo['id'];
   }
 }
-//var_dump($journalData);
+//var_dump($articleData);
 
 ?>
 
