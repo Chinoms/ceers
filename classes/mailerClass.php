@@ -1,8 +1,10 @@
 <?php
+require_once("config.php");
 /*
  * @author Chinoms
  * https://twitter.com/chinoms
  */
+
 /**
  * This class handles all the mail functions for this app.
  *
@@ -34,10 +36,31 @@ we'll train you and you'll be fully on board</p>
 ";
         $headers = "MIME-Version: 1.0" . "\r\n";
         $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-// More headers
+        // More headers
         $headers .= 'From: <admin@tutorkings.com>' . "\r\n";
         mail($to, $subject, $message, $headers);
         echo "mail sent!";
     }
+
+    public function sendContactForm($email, $fname, $lname, $userSubject, $message, $contactEmail, $body){ 
+        $email = $contactEmail;
+        $subject = $userSubject;
+        $message = "<html>
+        <head>
+        <title>".$subject."</title>
+        </head>
+        <body>
+        <center><img src='https://tceers.com/imgs/tceerslogo.png' height='100'></center>
+        <br>
+        <strong>Name: </strong>".$fname." ".$lname."<br>
+        <strong>Message: </strong><br>".$body;
+        $headers = "MIME-Version: 1.0" . "\r\n";
+        $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+        $headers .= 'From: <mail@tceers.com>' . "\r\n";
+        if(mail($email, $subject, $headers)){
+            header("location: contact.php?msg='messagesent'");
+        }
+
+    }
 }
-$sendMail = new mailerClass();
+$sendMail = new MailerClass();

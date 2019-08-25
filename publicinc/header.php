@@ -5,7 +5,7 @@
     
     <title>The Consultum for Educational Evaluators, Researchers and Statisticians </title>
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0" />
-
+    <meta name="google-site-verification" content="ZiBdxGN09Dq_pHne2L0MWePvhqQvHYgiLiiteW8C-NI" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
@@ -89,6 +89,14 @@
     #navigator a {
         font-size: 14px;
     }
+    .searchlead{
+        text-align: center;
+    }
+
+    .searchSpan{
+        border-bottom: 1px dotted black;
+        padding-top: 10px;
+    }
     </style>
 </head>
 
@@ -140,8 +148,10 @@
                             SEARCH
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <input type="text" class="dropdown-item form-control col-md-10"
+                            <form action="search.php" method="GET">
+                            <input type="text" name="searchstring" class="dropdown-item form-control col-md-10"
                                 placeholder="Search for articles, journals, ...">
+                            </form>
                         </div>
                     </li>
                     <li class="nav-item">

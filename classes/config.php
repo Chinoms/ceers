@@ -9,6 +9,7 @@ if (in_array($_SERVER['REMOTE_ADDR'], $localhost)) {
    $port = 8080;
    global $baseURL;
    $baseURL = "http://localhost/ceers";
+   $contactEmail = "enquiries@tceers.com";
 } else {
    $host = "localhost";
    $username = "ceervdcg_dbadmin";
@@ -17,6 +18,7 @@ if (in_array($_SERVER['REMOTE_ADDR'], $localhost)) {
    $port = 8080;
    global $baseURL;
    $baseURL = "http://tceers.com/";
+   $contactEmail = "enquiries@tceers.com";
 }
 
 

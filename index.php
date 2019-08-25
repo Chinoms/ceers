@@ -23,7 +23,6 @@ require_once("publicinc/header.php");
 </section>
 
 
-<div id="playground">
 </div>
 
 <!-- Feature 10 -->
