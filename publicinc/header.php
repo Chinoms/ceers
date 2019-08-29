@@ -2,7 +2,16 @@
 <html>
 
 <head>
-    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-44470115-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-44470115-2');
+</script>
+
     <title>The Consultum for Educational Evaluators, Researchers and Statisticians </title>
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0" />
     <meta name="google-site-verification" content="ZiBdxGN09Dq_pHne2L0MWePvhqQvHYgiLiiteW8C-NI" />
@@ -34,7 +43,7 @@
 <link rel="manifest" href="/manifest.json">
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-<meta name="theme-color" content="#ffffff">
+<meta name="theme-color" content="##118187">
 
 <!----site icons end here--->
     <style>
