@@ -27,7 +27,7 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="index.html"><i class="fa fa-circle-o"></i>Dashboard</a></li>
+            <li><a href="#!"><i class="fa fa-circle-o"></i>Dashboard</a></li>
             <!--li class="active"><a href="index2.html"><i class="fa fa-circle-o"></i></a></li-->
           </ul>
           </li>
